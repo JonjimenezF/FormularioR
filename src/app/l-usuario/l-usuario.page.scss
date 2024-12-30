@@ -1,0 +1,46 @@
+/* Fondo general */
+.content-background {
+    --background: #121212; /* Negro */
+  }
+  
+  /* Encabezado */
+  .header-title {
+    color: #121212; /* Blanco */
+    font-size: 1.5rem;
+    text-align: center;
+    color:  white;
+  }
+  
+  /* Tarjeta de usuario */
+  .user-card {
+    background-color: #1e1e2f; /* Negro con tono morado */
+    color: #ffffff; /* Blanco */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+  }
+  
+  /* Encabezado de la tarjeta */
+  .user-name {
+    color: #9c27b0; /* Morado */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Items personalizados */
+  .custom-item {
+    --background: transparent;
+    --color: #ffffff; /* Blanco */
+    border-bottom: 1px solid #9c27b0; /* Línea morada */
+    margin: 5px 0;
+  }
+  
+  /* Texto sin usuarios */
+  .no-users {
+    color: #9c27b0; /* Morado */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  

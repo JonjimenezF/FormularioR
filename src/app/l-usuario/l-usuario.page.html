@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar >
+    <ion-title class="header-title">Lista de Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content-background">
+  <ion-list *ngIf="users.length > 0">
+    <div *ngFor="let user of users" class="user-container">
+      <ion-card class="user-card">
+          <ion-card-header>
+            <ion-card-title class="user-name">{{ user.nombre }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Fecha de Ingreso:</ion-label>
+            <ion-item class="custom-item">
+              <ion-input [value]="user.fecha_Ingreso" readonly></ion-input>
+            </ion-item>
+            <ion-label>Fecha de Vencimiento:</ion-label>
+            <ion-item class="custom-item">
+              <ion-input [value]="user.fecha_vencimiento" readonly></ion-input>
+            </ion-item>
+            <ion-label>N° de Teléfono:</ion-label>
+            <ion-item class="custom-item">    
+              <ion-input [value]="user.nTelefono" readonly></ion-input>
+            </ion-item>
+            <ion-label>Observaciones:</ion-label>
+            <ion-item class="custom-item">
+              <ion-textarea [value]="user.Observ" readonly></ion-textarea>
+            </ion-item>
+            <ion-label>Usuario:</ion-label>
+            <ion-item class="custom-item">
+              <ion-input [value]="user.usuario" readonly></ion-input>
+            </ion-item>
+            <ion-label>Contraseña:</ion-label>
+            <ion-item class="custom-item">
+              <ion-input [value]="user.password" readonly></ion-input>
+            </ion-item>
+            <ion-label>Valor del Servicio:</ion-label>
+            <ion-item class="custom-item">
+              <ion-input [value]="user.valorServicio" readonly></ion-input>
+            </ion-item>
+            <ion-label>URL:</ion-label>
+            <ion-item class="custom-item">
+              <ion-input #inputField [value]="user.url" readonly></ion-input>
+            </ion-item>
+            <div style="display: flex;justify-content: center;">
+              <ion-button fill="outline" size="small" (click)="copyToClipboard(inputField.value)">
+                Copiar URL
+              </ion-button>
+              <ion-button fill="solid" size="small" (click)="EditarUsuario(user)">
+                Editar
+              </ion-button>
+              <ion-button fill="clear" size="small" (click)="EliminarUsuario(user.nombre)">
+                Eliminar
+              </ion-button>
+            </div>
+          </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-list>
+  <div *ngIf="users.length === 0" class="no-users">
+    <p>No hay usuarios registrados.</p>
+  </div>
+</ion-content>

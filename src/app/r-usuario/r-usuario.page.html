@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="header-title">Registrar Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content-background">
+  <form (ngSubmit)="onSubmit()" class="user-form">
+    <ion-item class="form-item">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="user.nombre" name="nombre" required></ion-input>
+    </ion-item>
+    <ion-item class="form-item">
+      <ion-label position="floating">Fecha de Ingreso</ion-label>
+      <ion-datetime
+        presentation="date"
+        displayFormat="DD/MM/YYYY"
+        [(ngModel)]="user.fecha_Ingreso"
+        name="fecha_Ingreso"
+        required
+        (ionChange)="formatDateI()"
+      ></ion-datetime>
+    </ion-item>
+    <ion-item class="form-item">
+      <ion-label position="floating">Fecha de Vencimiento</ion-label>
+      <ion-datetime
+        presentation="date"
+        displayFormat="DD/MM/YYYY"
+        [(ngModel)]="user.fecha_vencimiento"
+        name="fecha_vencimiento"
+        required
+        (ionChange)="formatDate()"
+      ></ion-datetime>
+    </ion-item>
+    
+    <ion-item class="form-item">
+      <ion-label position="floating">N° de Teléfono</ion-label>
+      <ion-input type="tel" [(ngModel)]="user.nTelefono" name="nTelefono"></ion-input>
+    </ion-item>
+    <ion-item class="form-item">
+      <ion-label position="floating">Observaciones</ion-label>
+      <ion-textarea [(ngModel)]="user.Observ" name="Observ"></ion-textarea>
+    </ion-item>
+    <ion-item class="form-item">
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="user.usuario" name="usuario" required></ion-input>
+    </ion-item>
+    <ion-item class="form-item">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="text" [(ngModel)]="user.password" name="password" required></ion-input>
+    </ion-item>
+    <ion-item class="form-item">
+      <ion-label position="floating">Valor del Servicio</ion-label>
+      <ion-input type="number" [(ngModel)]="user.valorServicio" name="valorServicio"></ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit" class="submit-button">
+      Guardar Usuario
+    </ion-button>
+  </form>
+</ion-content>

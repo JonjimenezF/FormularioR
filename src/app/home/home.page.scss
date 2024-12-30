@@ -1,27 +1,63 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+/* Fondo general */
+.content-background {
+  --background: #1e1e2f; /* Negro suave con un toque morado */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente la imagen */
+  align-items: center; /* Centra horizontalmente la imagen */
+  height: 100vh; /* Ocupa toda la pantalla */
+  background-color: var(--background);
   margin: 0;
+  padding: 0;
 }
 
-#container a {
-  text-decoration: none;
+/* Imagen del logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Espaciado inferior entre la imagen y los botones */
+}
+
+/* Contenedor de botones */
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+   /* Centra verticalmente los botones dentro del contenedor */
+  align-items: center; /* Centra horizontalmente */
+  gap: 15px; /* Espaciado entre botones */
+  margin-top: 0; /* Elimina empuje hacia abajo */
+  padding: 20px 0; /* Espaciado superior e inferior */
+}
+
+/* Botones personalizados */
+.custom-button {
+  --background: #9c27b0; /* Morado brillante */
+  --color: #ffffff; /* Blanco */
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.custom-button:hover {
+  --background: #7b1fa2; /* Morado más oscuro */
+  transform: scale(1.03);
+  transition: 0.3s ease-in-out;
+}
+
+/* Botón secundario */
+.secondary-button {
+  --background: #2c2c3e; /* Fondo con tono oscuro */
+  --color: #ffffff; /* Blanco */
+  border: 2px solid #9c27b0; /* Borde morado */
+}
+
+.secondary-button:hover {
+  --background: #121212; /* Negro intenso */
+  --color: #9c27b0; /* Texto morado */
+  transform: scale(1.03);
+  transition: 0.3s ease-in-out;
 }

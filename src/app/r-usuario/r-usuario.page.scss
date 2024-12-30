@@ -1,0 +1,60 @@
+/* Fondo general */
+.content-background {
+    --background: #121212; /* Negro */
+    padding: 20px;
+  }
+  
+  /* Encabezado */
+  .header-title {
+    color: #ffffff; /* Blanco */
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Formulario */
+  .user-form {
+    background-color: #1e1e2f; /* Negro con tono morado */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Items del formulario */
+  .form-item {
+    --background: transparent;
+    --color: #ffffff; /* Blanco */
+    border-bottom: 1px solid #9c27b0; /* Línea morada */
+    margin-bottom: 15px;
+  }
+  
+  /* Etiquetas */
+  .form-item ion-label {
+    color: #9c27b0; /* Morado */
+    font-weight: bold;
+  }
+  
+  /* Campos de entrada */
+  .form-item ion-input,
+  .form-item ion-textarea,
+  .form-item ion-datetime {
+    color: #ffffff; /* Blanco */
+    --placeholder-color: #9c27b0; /* Morado */
+  }
+  
+  /* Botón de envío */
+  .submit-button {
+    --background: #9c27b0; /* Morado */
+    --color: #ffffff; /* Blanco */
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .submit-button:hover {
+    --background: #7b1fa2; /* Morado más oscuro */
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+  }
+  
